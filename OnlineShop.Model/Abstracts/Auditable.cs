@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace OnlineShop.Model.Abstracts
 {
-    public abstract class Auditable : IAuditable, ISwitchable, ISeoable
+    public abstract class Auditable : IAuditable
     {
         public DateTime? CreatedDate { get; set; }
 

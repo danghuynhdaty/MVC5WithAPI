@@ -18,8 +18,9 @@ namespace OnlineShop.Model.Models
         public String Name { get; set; }
 
         [Required]
-        [MaxLength(250)]
-        public String Alias { get; set; }
+        [MaxLength(256)]
+        [Column(TypeName = "varchar")]
+        public string Alias { get; set; }
 
         [Required]
         public int CategoryID { get; set; }
@@ -33,7 +34,7 @@ namespace OnlineShop.Model.Models
         public string Content { get; set; }
         public bool? HomeFlag { get; set; }
         public bool? HotFlag { get; set; }
-        public int ViewCount { get; set; }
+        public int? ViewCount { get; set; }
 
 
         #region Khóa ngoại

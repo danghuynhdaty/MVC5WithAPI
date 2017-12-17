@@ -16,6 +16,11 @@ namespace OnlineShop.Model.Models
 
         public string Content { get; set; }
 
+        [Required]
+        [MaxLength(256)]
+        [Column(TypeName ="varchar")]
+        public string Alias { get; set; }
+
         [MaxLength(250)]
         public string MetaDescription { get; set; }
 

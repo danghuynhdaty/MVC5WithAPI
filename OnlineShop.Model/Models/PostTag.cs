@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,11 @@ namespace OnlineShop.Model.Models
     [Table("PostTags")]
     public class PostTag
     {
+        [Key]
         public int PostID { get; set; }
+        [Key]
+        [MaxLength(50)]
+        [Column(TypeName ="varchar")]
         public string TagID { get; set; }
 
 

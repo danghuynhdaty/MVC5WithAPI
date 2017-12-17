@@ -12,13 +12,13 @@ namespace OnlineShop.Model.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // thuộc tính tự tăng
         public int ID { get; set; }
 
-        [MaxLength(250)]
+        [MaxLength(256)]
         public string CustomerName { get; set; }
 
-        [MaxLength(250)]
+        [MaxLength(256)]
         public string CustomerAddress { get; set; }
 
-        [MaxLength(250)]
+        [MaxLength(256)]
         public string CustomerEmail { get; set; }
 
         [MaxLength(50)]
@@ -40,7 +40,7 @@ namespace OnlineShop.Model.Models
         [Required]
         public bool Status { get; set; }
 
-        [MaxLength(250)]
+        [MaxLength(256)]
         public string PaymentMethod { get; set; }
 
         [MaxLength(50)]
