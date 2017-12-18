@@ -15,7 +15,7 @@ namespace OnlineShop.Model.Models
         public string Code { get; set; }
 
         [Required]
-        [MaxLength(250)]
+        [MaxLength(256)]
         public string Value { get; set; }
     }
 }
