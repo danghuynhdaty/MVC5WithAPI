@@ -8,10 +8,11 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.Data.Repository
 {
-    public interface IPostTagsRepository { }
+    public interface IPostTagsRepository : IRepository<PostTag>
+    { }
     public class PostTagRepository : RepositoryBase<PostTag>, IPostTagsRepository
     {
-        protected PostTagRepository(IDbFactory dbFactory) : base(dbFactory)
+        public PostTagRepository(IDbFactory dbFactory) : base(dbFactory)
         {
         }
     }

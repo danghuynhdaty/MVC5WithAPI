@@ -3,7 +3,8 @@ using OnlineShop.Model.Models;
 
 namespace OnlineShop.Data.Repository
 {
-    public interface IPageRepository { }
+    public interface IPageRepository : IRepository<Page>
+    { }
 
     public class PageRepository : RepositoryBase<Page>, IPageRepository
     {

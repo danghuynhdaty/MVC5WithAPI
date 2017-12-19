@@ -67,6 +67,7 @@
     <Compile Include="Repository\OrderDetailRepository.cs" />
     <Compile Include="Repository\OrderRepository.cs" />
     <Compile Include="Repository\PageRepository.cs" />
+    <Compile Include="Repository\PostCategoryRepository.cs" />
     <Compile Include="Repository\PostRepository.cs" />
     <Compile Include="Repository\PostTagRepository.cs" />
     <Compile Include="Repository\ProductCategoryRepository.cs" />

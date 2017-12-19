@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.Data.Repository
 {
-    public interface IVisitorStaticticRepository { }
+    public interface IVisitorStaticticRepository : IRepository<VisitorStatictic> { }
     public class VisitorStaticticRepository : RepositoryBase<VisitorStatictic>, IVisitorStaticticRepository
     {
-        protected VisitorStaticticRepository(IDbFactory dbFactory) : base(dbFactory)
+        public VisitorStaticticRepository(IDbFactory dbFactory) : base(dbFactory)
         {
         }
     }

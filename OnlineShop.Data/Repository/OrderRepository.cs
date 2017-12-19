@@ -3,11 +3,12 @@ using OnlineShop.Model.Models;
 
 namespace OnlineShop.Data.Repository
 {
-    public interface IOrderRepository { }
+    public interface IOrderRepository : IRepository<Order>
+    { }
 
     public class OrderRepository : RepositoryBase<Order>, IOrderRepository
     {
-        protected OrderRepository(IDbFactory dbFactory) : base(dbFactory)
+        public OrderRepository(IDbFactory dbFactory) : base(dbFactory)
         {
         }
     }

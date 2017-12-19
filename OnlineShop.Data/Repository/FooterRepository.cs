@@ -1,19 +1,15 @@
 ﻿using OnlineShop.Data.Infrastructure;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using OnlineShop.Model.Models;
 
 namespace OnlineShop.Data.Repository
 {
-    public interface IFooterRepository
+    public interface IFooterRepository : IRepository<Footer>
     {
-
     }
-    public class FooterRepository : RepositoryBase<FooterRepository>, IFooterRepository
+
+    public class FooterRepository : RepositoryBase<Footer>, IFooterRepository
     {
-        protected FooterRepository(IDbFactory dbFactory) : base(dbFactory)
+        public FooterRepository(IDbFactory dbFactory) : base(dbFactory)
         {
         }
     }

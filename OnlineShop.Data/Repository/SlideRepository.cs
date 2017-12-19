@@ -8,10 +8,11 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.Data.Repository
 {
-    public interface ISlideRepository { }
+    public interface ISlideRepository : IRepository<Slide>
+    { }
     public class SlideRepository : RepositoryBase<Slide>, ISlideRepository
     {
-        protected SlideRepository(IDbFactory dbFactory) : base(dbFactory)
+        public SlideRepository(IDbFactory dbFactory) : base(dbFactory)
         {
         }
     }

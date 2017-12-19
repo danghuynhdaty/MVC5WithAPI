@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.Data.Repository
 {
-    public interface ISupportOnlineRepository { }
+    public interface ISupportOnlineRepository : IRepository<SupportOnline> { }
     public class SupportOnlineRepository : RepositoryBase<SupportOnline>, ISupportOnlineRepository
     {
-        protected SupportOnlineRepository(IDbFactory dbFactory) : base(dbFactory)
+        public SupportOnlineRepository(IDbFactory dbFactory) : base(dbFactory)
         {
         }
     }
