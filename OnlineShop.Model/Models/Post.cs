@@ -14,7 +14,7 @@ namespace OnlineShop.Model.Models
         public int ID { get; set; }
 
         [Required]
-        [MaxLength(250)]
+        [MaxLength(256)]
         public String Name { get; set; }
 
         [Required]
@@ -25,7 +25,7 @@ namespace OnlineShop.Model.Models
         [Required]
         public int CategoryID { get; set; }
 
-        [MaxLength(250)]
+        [MaxLength(256)]
         public string Image { get; set; }
 
         [MaxLength(500)]

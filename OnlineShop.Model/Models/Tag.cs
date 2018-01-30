@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OnlineShop.Model.Models
 {
-    [Table("(Tags")]
+    [Table("Tags")]
     public class Tag
     {
         [Key]

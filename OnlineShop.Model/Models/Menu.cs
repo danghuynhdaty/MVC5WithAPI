@@ -23,14 +23,10 @@ namespace OnlineShop.Model.Models
         [Required]
         public int GroupID { get; set; }
 
-
         public string Target { get; set; }
 
         [Required]
         public bool Status { get; set; }
-
-
-
 
         /// <summary>
         /// khóa ngoại cho bảng này

@@ -11,7 +11,7 @@ namespace OnlineShop.Model.Models
         public int ID { get; set; }
 
         [Required]
-        [MaxLength(250)]
+        [MaxLength(256)]
         public string Name { get; set; }
 
         public string Content { get; set; }
@@ -21,10 +21,10 @@ namespace OnlineShop.Model.Models
         [Column(TypeName ="varchar")]
         public string Alias { get; set; }
 
-        [MaxLength(250)]
+        [MaxLength(256)]
         public string MetaDescription { get; set; }
 
-        [MaxLength(250)]
+        [MaxLength(256)]
         public string MetaKeyWord { get; set; }
 
         [Required]
