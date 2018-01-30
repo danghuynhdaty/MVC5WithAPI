@@ -7,13 +7,13 @@ namespace OnlineShop.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class InitialDb : IMigrationMetadata
+    public sealed partial class InitialDB : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialDb));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialDB));
         
         string IMigrationMetadata.Id
         {
-            get { return "201712180811175_InitialDb"; }
+            get { return "201801301322384_InitialDB"; }
         }
         
         string IMigrationMetadata.Source

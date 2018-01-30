@@ -3,10 +3,21 @@ namespace OnlineShop.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialDb : DbMigration
+    public partial class InitialDB : DbMigration
     {
         public override void Up()
         {
+            CreateTable(
+                "dbo.Errors",
+                c => new
+                    {
+                        ID = c.Int(nullable: false, identity: true),
+                        Message = c.String(),
+                        StackTrace = c.String(),
+                        CreatedDate = c.DateTime(nullable: false),
+                    })
+                .PrimaryKey(t => t.ID);
+            
             CreateTable(
                 "dbo.Footers",
                 c => new
@@ -306,6 +317,7 @@ namespace OnlineShop.Data.Migrations
             DropTable("dbo.Menu");
             DropTable("dbo.MenuGroups");
             DropTable("dbo.Footers");
+            DropTable("dbo.Errors");
         }
     }
 }

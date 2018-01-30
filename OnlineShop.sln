@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShop.Model", "OnlineS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShop.Web", "OnlineShop.Web\OnlineShop.Web.csproj", "{3D385B03-A484-45C2-83FF-E9C93150B9C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShop.Web.Tests", "OnlineShop.Web.Tests\OnlineShop.Web.Tests.csproj", "{C442CF7A-4308-4C8B-933A-E9E982DD0F4A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShop.UnitTest", "OnlineShop.Web.Tests\OnlineShop.UnitTest.csproj", "{C442CF7A-4308-4C8B-933A-E9E982DD0F4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
