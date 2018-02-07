@@ -19,12 +19,12 @@ namespace OnlineShop.Web.Infrastucture.Core
             _errorService = errorService;
         }
 
-        protected HttpResponseMessage CreateHttpRespone(HttpRequestMessage httpRequestMessage, Func<HttpResponseMessage> func)
+        protected HttpResponseMessage CreateHttpRespone(HttpRequestMessage httpRequestMessage, Func<HttpResponseMessage> function)
         {
             HttpResponseMessage respone = null;
             try
             {
-                respone = func.Invoke();
+                respone = function.Invoke();
             }
             catch (DbEntityValidationException dbEntityEx)
             {

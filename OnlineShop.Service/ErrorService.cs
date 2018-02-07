@@ -19,8 +19,8 @@ namespace OnlineShop.Service
 
         public ErrorService(IErrorRepository errorService, IUnitOfWork unitOfWork)
         {
-            _errorRepository = errorService;
-            _unitOfWork = unitOfWork;
+            this._errorRepository = errorService;
+            this._unitOfWork = unitOfWork;
         }
 
         public Error Create(Error error)
