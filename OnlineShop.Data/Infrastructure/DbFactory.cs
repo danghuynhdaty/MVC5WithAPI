@@ -1,19 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OnlineShop.Data.Infrastructure
+﻿namespace OnlineShop.Data.Infrastructure
 {
-    class DbFactory : Disposable, IDbFactory
+    internal class DbFactory : Disposable, IDbFactory
     {
         private OnlineShopDbContext dbContext;
+
         public OnlineShopDbContext Init()
         {
             return dbContext ?? (dbContext = new OnlineShopDbContext());
-
-
         }
 
         /// <summary>
@@ -21,7 +14,7 @@ namespace OnlineShop.Data.Infrastructure
         /// </summary>
         protected override void DisposeCore()
         {
-            if (dbContext!=null)
+            if (dbContext != null)
             {
                 dbContext.Dispose();
             }

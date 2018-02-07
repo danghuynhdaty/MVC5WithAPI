@@ -1,11 +1,7 @@
 ﻿using OnlineShop.Data.Infrastructure;
 using OnlineShop.Data.Repository;
 using OnlineShop.Model.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OnlineShop.Service
 {
@@ -16,23 +12,32 @@ namespace OnlineShop.Service
         /// </summary>
         /// <param name="post"></param>
         void AddPost(Post post);
+
         /// <summary>
         /// chỉnh sửa post
         /// </summary>
         /// <param name="post"></param>
         void UpdatePost(Post post);
+
         void DeletePost(int id);
+
         Post GetPostByID(int id);
+
         IEnumerable<Post> GetAll();
+
         IEnumerable<Post> GetAllPaging(int page, int pageSize, out int totalRow);
+
         IEnumerable<Post> GetAllByTagPaging(string tag, int page, int pageSize, out int totalRow);
+
         IEnumerable<Post> GetAllByCategoryPaging(int categoryID, int page, int pageSize, out int totalRow);
+
         void SaveChanges();
     }
+
     public class PostService : IPostService
     {
-        IPostRepository _postRepository;
-        IUnitOfWork _unitOfWork;
+        private IPostRepository _postRepository;
+        private IUnitOfWork _unitOfWork;
 
         public PostService(IPostRepository postRepository, IUnitOfWork unitOfWork)
         {
@@ -57,7 +62,7 @@ namespace OnlineShop.Service
 
         public IEnumerable<Post> GetAllByCategoryPaging(int categoryID, int page, int pageSize, out int totalRow)
         {
-            return _postRepository.GetMultiPaging(p=>p.Status && p.CategoryID == categoryID, out totalRow,page,pageSize, new string[] { "PostCategory"});
+            return _postRepository.GetMultiPaging(p => p.Status && p.CategoryID == categoryID, out totalRow, page, pageSize, new string[] { "PostCategory" });
         }
 
         public IEnumerable<Post> GetAllByTagPaging(string tag, int page, int pageSize, out int totalRow)
