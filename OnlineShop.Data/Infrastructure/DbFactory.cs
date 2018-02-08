@@ -1,6 +1,6 @@
 ﻿namespace OnlineShop.Data.Infrastructure
 {
-    internal class DbFactory : Disposable, IDbFactory
+    public class DbFactory : Disposable, IDbFactory
     {
         private OnlineShopDbContext dbContext;
 
